@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>The this Keyword in JavaScript</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- TITLE BAR -->
+<header class="title-bar">
+  <h1>The this Keyword in JavaScript</h1>
+</header>
+
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="logo">good day</div>
+
+  <ul class="nav-links">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">JavaScript</a></li>
+
+    <!-- DROPDOWN -->
+    <li class="dropdown">
+      <a href="#">Courses ▾</a>
+      <ul class="dropdown-menu">
+        <li><a href="#">JavaScript</a></li>
+        <li><a href="#">C++</a></li>
+        <li><a href="#">HTML</a></li>
+        <li><a href="#">CSS</a></li>
+      </ul>
+    </li>
+
+    <li><a href="#">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- MAIN CONTENT -->
+<main class="container">
+
+  <!-- LEFT -->
+  <section class="card large">
+    <h2>What is this?</h2>
+    <p>
+      The <b>this</b> keyword in JavaScript refers to the object that is
+      executing the current function. Its value depends on how a function is called.
+    </p>
+
+    <h3>Example: Object Method</h3>
+
+    <pre><code>
+const person = {
+  name: "John",
+  greet: function () {
+    return this.name;
+  }
+};
+
+console.log(person.greet());
+    </code></pre>
+
+    <button id="toggleBtn" onclick="toggleExample()">Run Example</button>
+    <p id="output"></p>
+  </section>
+
+  <!-- RIGHT -->
+  <aside class="side">
+    <div class="card">
+      <h3>In Global Scope</h3>
+      <p>In the global scope, <b>this</b> refers to the window object.</p>
+    </div>
+
+    <div class="card">
+      <h3>In Arrow Functions</h3>
+      <p>Arrow functions do not have their own <b>this</b>.</p>
+    </div>
+
+    <div class="card">
+      <h3>In Event Handlers</h3>
+      <p><b>this</b> refers to the element that received the event.</p>
+    </div>
+  </aside>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer-bar">
+  <div class="footer-left">
+    <h4>Contact Us</h4>
+    <p>Email: kishore405@gmail.com</p>
+    <p>Phone: +91 8888866990</p>
+  </div>
+
+  <div class="footer-center">
+  <h4>Follow Us</h4>
+  <div class="social-links">
+    
+    <a href="z:\youtube.jpg" title="YouTube">
+      <img src="youtube.jpg" alt="YouTube">
+    </a>
+
+    <a href="#" title="Facebook">
+      <img src="images/facebook.png" alt="Facebook">
+    </a>
+
+    <a href="#" title="Instagram">
+      <img src="images/instagram.png" alt="Instagram">
+    </a>
+
+  </div>
+</div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
+
+
+
