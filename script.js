@@ -1,26 +1,17 @@
-let isRunning = false;
+let running = false;
 
-function toggleExample() {
-  const btn = document.getElementById("toggleBtn");
-  const output = document.getElementById("output");
-
-  if (!isRunning) {
-    const person = {
-      name: "John",
-      greet: function () {
-        return this.name;
-      }
-    };
-
-    output.innerText = "Output: " + person.greet();
-    btn.innerText = "Stop Example";
-    btn.classList.add("active");
-    isRunning = true;
-  } else {
-    output.innerText = "";
-    btn.innerText = "Run Example";
-    btn.classList.remove("active");
-    isRunning = false;
+function runExample() {
+  if (!running) {
+    document.getElementById("output").innerText = "Output: John";
+    running = true;
+    document.getElementById("runBtn").disabled = true;
+    document.getElementById("stopBtn").disabled = false;
   }
 }
 
+function stopExample() {
+  document.getElementById("output").innerText = "";
+  running = false;
+  document.getElementById("runBtn").disabled = false;
+  document.getElementById("stopBtn").disabled = true;
+}

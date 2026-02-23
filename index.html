@@ -1,119 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>The this Keyword in JavaScript</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>Home</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- TITLE BAR -->
-<header class="title-bar">
+
+<header class="header">
   <h1>The this Keyword in JavaScript</h1>
 </header>
 
-
-<!-- NAVBAR -->
 <nav class="navbar">
   <div class="logo">good day</div>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="javascript.html">JavaScript</a></li>
 
-  <ul class="nav-links">
-    <li><a href="#">Home</a></li>
-    <li><a href="#">JavaScript</a></li>
-
-    <!-- DROPDOWN -->
     <li class="dropdown">
       <a href="#">Courses ▾</a>
-      <ul class="dropdown-menu">
-        <li><a href="#">JavaScript</a></li>
-        <li><a href="#">C++</a></li>
-        <li><a href="#">HTML</a></li>
-        <li><a href="#">CSS</a></li>
-      </ul>
+      <div class="dropdown-content">
+        <a href="html.html">HTML</a>
+        <a href="css.html">CSS</a>
+      </div>
     </li>
 
-    <li><a href="#">Contact</a></li>
+    <li><a href="contact.html">Contact</a></li>
   </ul>
 </nav>
 
-<!-- MAIN CONTENT -->
-<main class="container">
-
-  <!-- LEFT -->
-  <section class="card large">
-    <h2>What is this?</h2>
-    <p>
-      The <b>this</b> keyword in JavaScript refers to the object that is
-      executing the current function. Its value depends on how a function is called.
-    </p>
-
-    <h3>Example: Object Method</h3>
-    <p>Hello ,i am divya modifiying the code and push to git hub</p>
-    <pre><code>
-const person = {
-  name: "John",
-  greet: function () {
-    return this.name;
-  }
-};
-
-console.log(person.greet());
-    </code></pre>
-
-    <button id="toggleBtn" onclick="toggleExample()">Run Example</button>
-    <p id="output"></p>
-  </section>
-
-  <!-- RIGHT -->
-  <aside class="side">
+<section class="container">
+  <div class="grid">
     <div class="card">
-      <h3>In Global Scope</h3>
-      <p>In the global scope, <b>this</b> refers to the window object.</p>
+      <h3>HTML</h3>
+      <p>Structure of web pages</p>
     </div>
-
     <div class="card">
-      <h3>In Arrow Functions</h3>
-      <p>Arrow functions do not have their own <b>this</b>.</p>
+      <h3>CSS</h3>
+      <p>Styling the web pages</p>
     </div>
-
     <div class="card">
-      <h3>In Event Handlers</h3>
-      <p><b>this</b> refers to the element that received the event.</p>
+      <h3>JavaScript</h3>
+      <p>Make web pages interactive</p>
     </div>
-  </aside>
+    <div class="card">
+      <h3>React</h3>
+      <p>Frontend library</p>
+    </div>
+  </div>
+</section>
 
-</main>
-
-<!-- FOOTER -->
-<footer class="footer-bar">
-  <div class="footer-left">
-    <h4>Contact Us</h4>
+<footer>
+  <div>
+    <h3>Contact Us</h3>
     <p>Email: kishore405@gmail.com</p>
     <p>Phone: +91 8888866990</p>
   </div>
 
-  <div class="footer-center">
-  <h4>Follow Us</h4>
-  <div class="social-links">
-    
-    <a href="z:\youtube.jpg" title="YouTube">
-      <img src="youtube.jpg" alt="YouTube">
+  <div>
+    <h3>Follow Us</h3>
+    <a href="https://www.youtube.com" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png">
     </a>
-
-    <a href="#" title="Facebook">
-      <img src="images/facebook.png" alt="Facebook">
+    <a href="https://www.instagram.com" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/1384/1384063.png">
     </a>
-
-    <a href="#" title="Instagram">
-      <img src="images/instagram.png" alt="Instagram">
+    <a href="https://www.facebook.com" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/1384/1384053.png">
     </a>
-
   </div>
-</div>
 </footer>
 
-<script src="script.js"></script>
 </body>
 </html>
-
-
-

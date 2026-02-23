@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JavaScript</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2 class="page-title">JavaScript – this Keyword</h2>
+
+<div class="example-box">
+<pre id="code">
+const person = {
+  name: "John",
+  greet: function () {
+    return this.name;
+  }
+};
+</pre>
+
+<button id="runBtn" onclick="runExample()">Run Example</button>
+<button id="stopBtn" onclick="stopExample()" disabled>Stop Example</button>
+
+<p id="output"></p>
+</div>
+
+<a class="back" href="index.html">⬅ Back to Home</a>
+
+<script src="script.js"></script>
+</body>
+</html>
